@@ -85,19 +85,19 @@
 		//Return expected result from toString
 		child.toString = function(){
 			return to.toString()
-		}
+		};
 
 		//Allow the child to be extended.
 		child.extend = function(target){
 			//Create parent referance and inherentence path.
 			target.parent = to;
 			return ext.apply(child,arguments);
-		}
+		};
 	
 		return child
-	}
+	};
 	//Bootstrap Class by inheriting itself with empty constructor.
 	global.Class = global.Class.extend(function() {
         this.constructor=function(){}
     });
-})(this)
+})(this);
